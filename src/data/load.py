@@ -67,7 +67,7 @@ def load_and_log():
         )
 
         for name, data in zip(names, datasets):
-            # 🐣 Store a new file in the artifact, and write something into its contents.
+            # 🐣 Store a new file in the artifact, and write something into its contents
             with raw_data.new_file(name + ".pt", mode="wb") as file:
                 x, y = data.tensors
                 torch.save((x, y), file)
